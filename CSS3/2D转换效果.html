@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 150px;
+            height: 30px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+
+        .box::after {
+            /* 伪元素一定要加content */
+            content: '';
+            position: absolute;
+            top: 7px;
+            right: 14px;
+            width: 8px;
+            height: 8px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            transition: all 0.3;
+
+        }
+
+        /* hover和after之间不能有空格 */
+        .box:hover::after {
+            transform: rotate(225deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>

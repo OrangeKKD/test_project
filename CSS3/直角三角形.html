@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 150px;
+            height: 40px;
+            background-color: #fff;
+            line-height: 40px;
+            text-align: center;
+            margin: 0 auto;
+            border: solid 1px red;
+        }
+
+        .price {
+            position: relative;
+
+            float: left;
+            background-color: red;
+            height: 100%;
+            width: 75px;
+
+
+            color: aliceblue;
+            font-weight: 700;
+        }
+
+        .price i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-color: transparent #fff transparent transparent;
+            border-style: solid;
+            border-width: 40px 13px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="price">￥5000<i></i></div>
+        <span>￥7500</span>
+    </div>
+
+</body>
+
+</html>

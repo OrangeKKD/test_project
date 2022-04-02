@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+        }
+
+        .mountain {
+            position: relative;
+            height: 336px;
+            width: 100%;
+            margin: 100px auto;
+            background: url(images/bg1.png);
+            animation: run 15s linear infinite forwards
+        }
+
+        .bear {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background: url(images/bear.png);
+            margin: 100px auto;
+            animation: bear .8s steps(8) infinite forwards, move 2s forwards
+        }
+
+        @keyframes bear {
+            from {
+                background: url(images/bear.png) 0;
+            }
+
+            to {
+                background: url(images/bear.png) -1600px;
+            }
+        }
+
+        @keyframes move {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes run {
+            from {
+                background-position: 0;
+            }
+
+            to {
+                background-position: -3840px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mountain">
+        <div class="bear">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
